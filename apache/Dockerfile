@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y apache2 \
 
 COPY 000-default.conf /etc/apache2/sites-available
 COPY index.php /var/www/html
+COPY dwes.css /var/www/html 
 
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
